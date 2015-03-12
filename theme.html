@@ -54,6 +54,8 @@
         <h1><a href="{{ site.base_url }}">{{ site.name }}</a></h1>
         {% if pages %}
         <ul class="cover-nav">
+          <li><a href="/tag/whoshungry" class="{{ set_active('/tag/whoshungry') }}">Who's Hungry?</a></li>
+          <li><a href="/tag/compiler" class="{{ set_active('/tag/compiler') }}">Compiler</a></li>
           <li><a href="{{ site.base_url }}">Blog</a></li>
             {% for page in pages %}
             <li><a href="{{ page.permalink }}" class="{{ set_active(page.permalink) }}">{{ page.title }}</a></li>
