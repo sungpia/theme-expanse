@@ -19,6 +19,7 @@
     <!-- standard google analytics -->
     {% if site.analytics %}
     <script>
+    
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', '{{ site.analytics }}']);
     _gaq.push(['_trackPageview']);
@@ -29,6 +30,13 @@
     })();
     </script>
     {% endif %}
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" src="path-to-mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
   </head>
   <body{% if is_post or is_tag or is_page %} class="short-header"{% endif %}>
 
